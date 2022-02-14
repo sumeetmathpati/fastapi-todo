@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from enum import Enum
+
 
 app = FastAPI()
 
@@ -27,6 +29,10 @@ notes = [
         'todo': 'Complete the project.'
     }
 ]
+
+class UserType(str, Enum):
+    normal = 'normal'
+    admin = 'admin'
 
 @app.get("/")
 async def root():
