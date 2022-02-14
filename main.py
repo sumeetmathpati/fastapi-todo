@@ -31,3 +31,11 @@ notes = [
 @app.get("/")
 async def root():
     return {"message": "Hello world"}
+
+@app.get("/{user_id}")
+async def root(user_id: int):
+    
+    for v in users:
+        print(v['id'])
+        if v['id'] == user:
+            return v
