@@ -40,6 +40,17 @@ class UserType(str, Enum):
 async def root():
     return {"message": "Hello world"}
 
+@app.get("/users/{user_type}")
+async def get_users_of_type(user_type: UserType):
+
+    res = []
+    
+    for u in users:
+        if u['type'] == user_type:
+            res.append(u)
+    return res
+
+
 @app.get("/users/{user_id}")
 async def get_user(user_id: int):
     
