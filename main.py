@@ -43,5 +43,5 @@ async def root(user_id: int):
     
     for v in users:
         print(v['id'])
-        if v['id'] == user:
+        if v['id'] == user_id:
             return v
