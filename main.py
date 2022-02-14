@@ -38,7 +38,7 @@ class UserType(str, Enum):
 async def root():
     return {"message": "Hello world"}
 
-@app.get("/{user_id}")
+@app.get("/users/{user_id}")
 async def root(user_id: int):
     
     for v in users:
