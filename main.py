@@ -47,3 +47,5 @@ async def get_user(user_id: int):
         print(v['id'])
         if v['id'] == user_id:
             return v
+    return {'message': 'User not found'}
+
