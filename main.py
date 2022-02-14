@@ -39,7 +39,7 @@ async def root():
     return {"message": "Hello world"}
 
 @app.get("/users/{user_id}")
-async def root(user_id: int):
+async def get_user(user_id: int):
     
     for v in users:
         print(v['id'])
