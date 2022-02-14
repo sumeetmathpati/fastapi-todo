@@ -7,11 +7,13 @@ app = FastAPI()
 users = [
     {
         'id': 1,
-        'name': 'Sumeet'
+        'name': 'Sumeet',
+        'type': 'admin'
     },
     {
         'id': 2,
-        'name': 'Sumeet2'
+        'name': 'Sumeet2',
+        'type': 'normal'
     }
 ]
 
